@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = init;
+
+        function ouTime() {
+            let pinfo = document.querySelector('#info');
+            pinfo.innerHTML = '系统超时';
+        }
+
+        function init() {
+            let btn = document.querySelector('#btn1');
+            if (btn != null) {
+                console.log(btn);
+            }
+
+            btn.addEventListener('click', /*function*/() => {
+                let pinfo = document.querySelector('#info');
+                pinfo.innerHTML = '点击一下按钮';
+                setTimeout(ouTime, 3000);
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <p id="info"></p>
+    <button id="btn1">回调测试</button>
+
+</body>
+
+</html>
